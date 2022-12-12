@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p6-gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+        img{
+            width: 100%;
+        }  
+        :root{
+            --tostado:#EFDFA7;
+            --azul:#1B2B56;
+            --verde:#0A2D0C;
+            --blanco:#FFFFFF;
+            --negro:#000000;
+            --rojo:#891B1B;
+            --autor:'Montserrat', sans-serif;
+            --titulo_descripcion:'Montserrat', sans-serif;
+           
+           
+        }
+        h1{
+            font-family: var(--autor);
+            color: var(--negro);
+            font-size: 0.6em;
+            padding: 1.5em 0;
+            
+        }
+        h2,p{
+            font-family: var(--titulo_descripcion);  
+           
+        }
+        h2{
+            color: var(--azul);  
+            font-size: 1.2em;
+            font-weight: 700;
+            padding: 0.5em 0;
+        }
+        p{
+            color: var(--verde);
+            font-size:0.6em ;
+            font-weight: 400;
+        }
+        .gallery{
+            background-color: var(--tostado);
+            display:flex;
+            flex-wrap: wrap;
+            gap: 1em;
+        }
+
+        .card{
+            border-radius: 0.2em;
+            flex-basis: 18% ;
+            flex-grow: 1;
+            padding: 1em;
+            display:flex;
+            flex-direction: column;
+            background-color: #FFFFFF;
+            transition: flex-grow 1s;
+        }
+        .card:nth-child(1){
+            flex-basis: 40;
+            flex-grow: 2;
+
+         }
+
+
+        .card_img{
+            width: 100%;
+            height: 270px;
+        }
+
+        .card_img img{
+            object-fit: cover;
+            height: 100%;
+        }
+        .card:nth-child(2) img{
+            object-position: top;
+        }
+        .card:nth-child(3) img{
+            object-position: top;
+        }
+        .card:nth-child(4) img{
+            object-position: top;
+        }
+        .card:nth-child(5) img{
+            object-position: bottom;
+        }
+        .card:nth-child(6) img{
+            object-position: top;
+        }
+        .card:hover{
+            box-shadow: 0.1em 0.1em 0.5em var(--azul);
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="gallery">
+        <div class="card">
+            <figure class="card_img">
+                <img src="img/01.jpg" alt="">
+            </figure>
+            <header class="card_txt">
+                
+                <h1>Caminante sobre un mar de nubes</h1>
+                <h2>Caspar David Friedrich</h2>
+                <p>El caminante sobre el mar de nubes, del pintor romántico alemán Caspar David Friedrich, ha sido
+                    considerada como una de las obras maestras y más representativas del Romanticismo. Data del año
+                    1818.
+                </p>
+            </header>
+        </div>
+
+
+
+        <div class="card">
+            <figure class="card_img">
+                <img src="img/02.jpeg" alt="">
+            </figure>
+            
+            <header class="card_txt">
+                <h1>Los Girasoles</h1>
+                <h2>Van Gogh</h2>
+                <p>Los girasoles es una serie de cuadros al óleo realizados por el pintor neerlandés Vincent van Gogh.
+                    De la serie hay tres cuadros similares con catorce girasoles en un jarrón, dos con doce girasoles.
+                </p>
+            </header>
+         </div>
+
+
+        <div class="card">
+            <figure class="card_img">
+                <img src="img/03.jpg" alt="">
+            </figure>
+            <header class="card_txt">
+                <h1>El beso</h1>
+                <h2>Gustav Klimt</h2>
+                <p>El beso (original en alemán: Der Kuss) es una obra del pintor austríaco Gustav Klimt y
+                    probablemente su obra más conocida. Es un óleo con laminillas de oro y estaño sobre lienzo de
+                    180 x 180 centímetros, realizado entre 1907-08. 
+                    </p>
+            </header>
+        </div>
+
+
+        <div class="card">
+            <figure class="card_img">
+                <img src="img/04.jpg" alt="">
+            </figure>
+            <header class="card_txt">
+                <h1>Pandora</h1>
+                <h2> John William Waterhouse</h2>
+                <p>Pandora es una pintura al óleo creada en 1896 por John William Waterhouse. El cuadro se titula
+                    Pandora en honor a la que fue la primera mujer según la mitología griega, creada por orden de Zeus.
+                </p>
+            </header>
+        </div>
+
+
+        <div class="card">
+            <figure class="card_img">
+                <img src="img/05.jpeg" alt="">
+            </figure>
+            <header class="card_txt">
+                <h1>Nenúfares</h1>
+                <h2> Claude Monet</h2>
+                <p>Los nenúfares (con aproximadamente 250 ejemplares) en francés Les nymphéas es un ciclo de
+                    pinturas al óleo que ejecutó el pintor impresionista Monet (aproximadamente 250 obras) al final
+                    de su vida, sobre amplios paneles, como el de la ilustración, que mide 219-602 cm, y que
+                    actualmente se exhiben en el Museo de la Orangerie de las Tullerías, en París, Francia.
+                </p>
+            </header>
+        </div>
+
+
+        <div class="card">
+            <figure class="card_img">
+                <img src="img/06.jpg" alt="">
+            </figure>
+            <header class="card_txt">
+                <h1>Mujer con sombrilla</h1>
+                <h2> Claude Monet</h2>
+                <p>Mujer con sombrilla, también conocida como El paseo es un cuadro de Claude Monet en el que se
+                    muestra a su mujer dando un paseo bajo el sol con su hijo.
+                </p>
+            </header>
+        </div>
+
+
+    </main>
+    
+</body>
+</html>
